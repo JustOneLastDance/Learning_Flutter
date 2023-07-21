@@ -1,10 +1,12 @@
 import 'package:basic_component_tutorial/AlignLayoutRoute.dart';
+import 'package:basic_component_tutorial/AsyncBuilderRoute.dart';
 import 'package:basic_component_tutorial/ChangableThemeRoute.dart';
 import 'package:basic_component_tutorial/ClipRoute.dart';
 import 'package:basic_component_tutorial/ContainerRoute.dart';
 import 'package:basic_component_tutorial/CustomInheritedProviderRoute.dart';
 import 'package:basic_component_tutorial/CustomScrollViewRoute.dart';
 import 'package:basic_component_tutorial/DecoratedBoxRoute.dart';
+import 'package:basic_component_tutorial/DialogRoute.dart';
 import 'package:basic_component_tutorial/FittedBoxRoute.dart';
 import 'package:basic_component_tutorial/FlexLayoutWidgetRoute.dart';
 import 'package:basic_component_tutorial/FlowAndWrapLayoutRoute.dart';
@@ -118,6 +120,8 @@ class MyApp extends StatelessWidget {
             const ShoppingCartRoute(),
         'changeable_theme_page': (context) => const ChangeableThemeRoute(),
         'value_listenable_page': (context) => const ValueListenableRoute(),
+        'async_builder_page': (context) => const AsyncBuilderRoute(),
+        'dialog_page': (context) => const ShowDialogRoute(),
       },
     );
   }
@@ -229,6 +233,10 @@ class _MyHomePageState extends State<MyHomePage> {
             MyLuckyElevatedButton(
                 routeName: 'value_listenable_page',
                 buttonName: 'ValueListenableBuilder'),
+            MyLuckyElevatedButton(
+                routeName: 'async_builder_page', buttonName: 'AsyncBuilder'),
+            MyLuckyElevatedButton(
+                routeName: 'dialog_page', buttonName: 'Dialog'),
           ],
         ),
       ),
