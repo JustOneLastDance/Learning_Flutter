@@ -1,3 +1,4 @@
+import 'package:basic_component_tutorial/AIINotificationRoute.dart';
 import 'package:basic_component_tutorial/AlignLayoutRoute.dart';
 import 'package:basic_component_tutorial/AsyncBuilderRoute.dart';
 import 'package:basic_component_tutorial/ChangableThemeRoute.dart';
@@ -7,11 +8,15 @@ import 'package:basic_component_tutorial/CustomInheritedProviderRoute.dart';
 import 'package:basic_component_tutorial/CustomScrollViewRoute.dart';
 import 'package:basic_component_tutorial/DecoratedBoxRoute.dart';
 import 'package:basic_component_tutorial/DialogRoute.dart';
+import 'package:basic_component_tutorial/EventBusRoute.dart';
 import 'package:basic_component_tutorial/FittedBoxRoute.dart';
 import 'package:basic_component_tutorial/FlexLayoutWidgetRoute.dart';
 import 'package:basic_component_tutorial/FlowAndWrapLayoutRoute.dart';
 import 'package:basic_component_tutorial/FormTestRoute.dart';
+import 'package:basic_component_tutorial/GestureConflictRoute.dart';
+import 'package:basic_component_tutorial/GestureTestRoute.dart';
 import 'package:basic_component_tutorial/GridViewRoute.dart';
+import 'package:basic_component_tutorial/HitTestBehaviorRoute.dart';
 import 'package:basic_component_tutorial/InfiniteListViewRoute.dart';
 import 'package:basic_component_tutorial/InheritedWidgetRoute.dart';
 import 'package:basic_component_tutorial/LayoutBuilderAndAfterLayoutRoute.dart';
@@ -21,6 +26,7 @@ import 'package:basic_component_tutorial/NestedScrollViewRoute.dart';
 import 'package:basic_component_tutorial/NestedTabBarViewRoute.dart';
 import 'package:basic_component_tutorial/PaddingAndEdgeInsetsRoute.dart';
 import 'package:basic_component_tutorial/PageViewRoute.dart';
+import 'package:basic_component_tutorial/PointerEventRoute.dart';
 import 'package:basic_component_tutorial/ProgressIndicatorRoute.dart';
 import 'package:basic_component_tutorial/ScaffoldRoute.dart';
 import 'package:basic_component_tutorial/ScrollControllerRoute.dart';
@@ -31,6 +37,7 @@ import 'package:basic_component_tutorial/StackAndPositionedLayoutRoute.dart';
 import 'package:basic_component_tutorial/TabBarViewRoute.dart';
 import 'package:basic_component_tutorial/TransformRoute.dart';
 import 'package:basic_component_tutorial/ValueListenableBuilderRoute.dart';
+import 'package:basic_component_tutorial/WaterMaskRoute.dart';
 import 'package:basic_component_tutorial/WillPopScopeRoute.dart';
 import 'package:flutter/material.dart';
 
@@ -122,6 +129,13 @@ class MyApp extends StatelessWidget {
         'value_listenable_page': (context) => const ValueListenableRoute(),
         'async_builder_page': (context) => const AsyncBuilderRoute(),
         'dialog_page': (context) => const ShowDialogRoute(),
+        'pointer_event_page': (context) => const PointerEventRoute(),
+        'gesture_test_page': (context) => const GestureTestRoute(),
+        'hit_test_behavior_page': (context) => const PointerDownListenerRoute(),
+        'water_mask_page': (context) => const WaterMaskRoute(),
+        'gesture_conflict_page': (context) => const GestureConflictRoute(),
+        'event_bus_page': (context) => const EventBusRoute(),
+        'my_notification_page': (context) => const MyNotificationRoute(),
       },
     );
   }
@@ -231,12 +245,25 @@ class _MyHomePageState extends State<MyHomePage> {
             MyLuckyElevatedButton(
                 routeName: 'changeable_theme_page', buttonName: '主题换肤'),
             MyLuckyElevatedButton(
-                routeName: 'value_listenable_page',
-                buttonName: 'ValueListenableBuilder'),
+                routeName: 'value_listenable_page', buttonName: '按需 Rebuild'),
             MyLuckyElevatedButton(
-                routeName: 'async_builder_page', buttonName: 'AsyncBuilder'),
+                routeName: 'async_builder_page', buttonName: '异步 UI 更新'),
+            MyLuckyElevatedButton(routeName: 'dialog_page', buttonName: '对话框'),
             MyLuckyElevatedButton(
-                routeName: 'dialog_page', buttonName: 'Dialog'),
+                routeName: 'pointer_event_page', buttonName: '触摸事件'),
+            MyLuckyElevatedButton(
+                routeName: 'gesture_test_page', buttonName: '手势识别'),
+            MyLuckyElevatedButton(
+                routeName: 'hit_test_behavior_page',
+                buttonName: 'HitTestBehavior'),
+            MyLuckyElevatedButton(
+                routeName: 'water_mask_page', buttonName: 'HitTestBehavior-水印'),
+            MyLuckyElevatedButton(
+                routeName: 'gesture_conflict_page', buttonName: '手势冲突'),
+            MyLuckyElevatedButton(
+                routeName: 'event_bus_page', buttonName: '事件总线'),
+            MyLuckyElevatedButton(
+                routeName: 'my_notification_page', buttonName: '通知'),
           ],
         ),
       ),
