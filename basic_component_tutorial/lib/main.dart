@@ -1,5 +1,7 @@
 import 'package:basic_component_tutorial/AIINotificationRoute.dart';
 import 'package:basic_component_tutorial/AlignLayoutRoute.dart';
+import 'package:basic_component_tutorial/AnimatedSwitcherRoute.dart';
+import 'package:basic_component_tutorial/AnimationBasicPrincipleRoute.dart';
 import 'package:basic_component_tutorial/AsyncBuilderRoute.dart';
 import 'package:basic_component_tutorial/ChangableThemeRoute.dart';
 import 'package:basic_component_tutorial/ClipRoute.dart';
@@ -16,6 +18,7 @@ import 'package:basic_component_tutorial/FormTestRoute.dart';
 import 'package:basic_component_tutorial/GestureConflictRoute.dart';
 import 'package:basic_component_tutorial/GestureTestRoute.dart';
 import 'package:basic_component_tutorial/GridViewRoute.dart';
+import 'package:basic_component_tutorial/HeroAnimationRoute.dart';
 import 'package:basic_component_tutorial/HitTestBehaviorRoute.dart';
 import 'package:basic_component_tutorial/InfiniteListViewRoute.dart';
 import 'package:basic_component_tutorial/InheritedWidgetRoute.dart';
@@ -34,6 +37,7 @@ import 'package:basic_component_tutorial/ScrollNotificationRoute.dart';
 import 'package:basic_component_tutorial/SingleChildScrollViewRoute.dart';
 import 'package:basic_component_tutorial/SliverAppBarRoute.dart';
 import 'package:basic_component_tutorial/StackAndPositionedLayoutRoute.dart';
+import 'package:basic_component_tutorial/StaggerAnimationRoute.dart';
 import 'package:basic_component_tutorial/TabBarViewRoute.dart';
 import 'package:basic_component_tutorial/TransformRoute.dart';
 import 'package:basic_component_tutorial/ValueListenableBuilderRoute.dart';
@@ -136,6 +140,15 @@ class MyApp extends StatelessWidget {
         'gesture_conflict_page': (context) => const GestureConflictRoute(),
         'event_bus_page': (context) => const EventBusRoute(),
         'my_notification_page': (context) => const MyNotificationRoute(),
+        'animation_basic_principle_page': (context) =>
+            const ScaleAnimationRoute(),
+        // 自定义 Hero
+        // 'hero_animation_page': (context) => const CustomHeroAnimationRoute(),
+        // Flutter 自带 Hero 动画
+        'hero_animation_page': (context) => const HeroAnimationRouteA(),
+        'stagger_animation_page': (context) => const StaggerAnimationRoute(),
+        'animated_switcher_page': (context) =>
+            const AnimatedSwitcherCounterRoute(),
       },
     );
   }
@@ -264,6 +277,15 @@ class _MyHomePageState extends State<MyHomePage> {
                 routeName: 'event_bus_page', buttonName: '事件总线'),
             MyLuckyElevatedButton(
                 routeName: 'my_notification_page', buttonName: '通知'),
+            MyLuckyElevatedButton(
+                routeName: 'animation_basic_principle_page',
+                buttonName: "Flutter 动画"),
+            MyLuckyElevatedButton(
+                routeName: 'hero_animation_page', buttonName: '自定义 Hero 动画'),
+            MyLuckyElevatedButton(
+                routeName: 'stagger_animation_page', buttonName: '交织动画'),
+            MyLuckyElevatedButton(
+                routeName: 'animated_switcher_page', buttonName: '动画切换组件'),
           ],
         ),
       ),
