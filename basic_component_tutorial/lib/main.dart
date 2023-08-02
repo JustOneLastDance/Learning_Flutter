@@ -6,7 +6,9 @@ import 'package:basic_component_tutorial/AsyncBuilderRoute.dart';
 import 'package:basic_component_tutorial/ChangableThemeRoute.dart';
 import 'package:basic_component_tutorial/ClipRoute.dart';
 import 'package:basic_component_tutorial/ContainerRoute.dart';
+import 'package:basic_component_tutorial/CustomCheckboxRoute.dart';
 import 'package:basic_component_tutorial/CustomInheritedProviderRoute.dart';
+import 'package:basic_component_tutorial/CustomPaintAndCanvasRoute.dart';
 import 'package:basic_component_tutorial/CustomScrollViewRoute.dart';
 import 'package:basic_component_tutorial/DecoratedBoxRoute.dart';
 import 'package:basic_component_tutorial/DialogRoute.dart';
@@ -17,6 +19,7 @@ import 'package:basic_component_tutorial/FlowAndWrapLayoutRoute.dart';
 import 'package:basic_component_tutorial/FormTestRoute.dart';
 import 'package:basic_component_tutorial/GestureConflictRoute.dart';
 import 'package:basic_component_tutorial/GestureTestRoute.dart';
+import 'package:basic_component_tutorial/GradientButtonRoute.dart';
 import 'package:basic_component_tutorial/GridViewRoute.dart';
 import 'package:basic_component_tutorial/HeroAnimationRoute.dart';
 import 'package:basic_component_tutorial/HitTestBehaviorRoute.dart';
@@ -41,6 +44,7 @@ import 'package:basic_component_tutorial/StaggerAnimationRoute.dart';
 import 'package:basic_component_tutorial/TabBarViewRoute.dart';
 import 'package:basic_component_tutorial/TransformRoute.dart';
 import 'package:basic_component_tutorial/ValueListenableBuilderRoute.dart';
+import 'package:basic_component_tutorial/WaterMarkRoute.dart';
 import 'package:basic_component_tutorial/WaterMaskRoute.dart';
 import 'package:basic_component_tutorial/WillPopScopeRoute.dart';
 import 'package:flutter/material.dart';
@@ -149,6 +153,10 @@ class MyApp extends StatelessWidget {
         'stagger_animation_page': (context) => const StaggerAnimationRoute(),
         'animated_switcher_page': (context) =>
             const AnimatedSwitcherCounterRoute(),
+        'gradient_button_page': (context) => const GradientButtonRoute(),
+        'draw_chessboard_page': (context) => const DrawChessBoardRoute(),
+        'custom_checkbox_page': (context) => const CustomCheckboxRoute(),
+        'water_mark_page': (context) => const WaterMarkRoute(),
       },
     );
   }
@@ -286,6 +294,14 @@ class _MyHomePageState extends State<MyHomePage> {
                 routeName: 'stagger_animation_page', buttonName: '交织动画'),
             MyLuckyElevatedButton(
                 routeName: 'animated_switcher_page', buttonName: '动画切换组件'),
+            MyLuckyElevatedButton(
+                routeName: 'gradient_button_page', buttonName: '自定义渐变按钮'),
+            MyLuckyElevatedButton(
+                routeName: 'draw_chessboard_page', buttonName: '画棋盘'),
+            MyLuckyElevatedButton(
+                routeName: 'custom_checkbox_page', buttonName: '自定义选择框'),
+            MyLuckyElevatedButton(
+                routeName: 'water_mark_page', buttonName: '水印'),
           ],
         ),
       ),
