@@ -4,6 +4,7 @@ import 'package:basic_component_tutorial/AnimatedSwitcherRoute.dart';
 import 'package:basic_component_tutorial/AnimationBasicPrincipleRoute.dart';
 import 'package:basic_component_tutorial/AsyncBuilderRoute.dart';
 import 'package:basic_component_tutorial/ChangableThemeRoute.dart';
+import 'package:basic_component_tutorial/ChunkDownloadRoute.dart';
 import 'package:basic_component_tutorial/ClipRoute.dart';
 import 'package:basic_component_tutorial/ContainerRoute.dart';
 import 'package:basic_component_tutorial/CustomCheckboxRoute.dart';
@@ -13,6 +14,7 @@ import 'package:basic_component_tutorial/CustomScrollViewRoute.dart';
 import 'package:basic_component_tutorial/DecoratedBoxRoute.dart';
 import 'package:basic_component_tutorial/DialogRoute.dart';
 import 'package:basic_component_tutorial/EventBusRoute.dart';
+import 'package:basic_component_tutorial/FileOperationRoute.dart';
 import 'package:basic_component_tutorial/FittedBoxRoute.dart';
 import 'package:basic_component_tutorial/FlexLayoutWidgetRoute.dart';
 import 'package:basic_component_tutorial/FlowAndWrapLayoutRoute.dart';
@@ -21,10 +23,13 @@ import 'package:basic_component_tutorial/GestureConflictRoute.dart';
 import 'package:basic_component_tutorial/GestureTestRoute.dart';
 import 'package:basic_component_tutorial/GradientButtonRoute.dart';
 import 'package:basic_component_tutorial/GridViewRoute.dart';
+import 'package:basic_component_tutorial/HTTPRequestRoute.dart';
 import 'package:basic_component_tutorial/HeroAnimationRoute.dart';
 import 'package:basic_component_tutorial/HitTestBehaviorRoute.dart';
+import 'package:basic_component_tutorial/HttpRequestDioRoute.dart';
 import 'package:basic_component_tutorial/InfiniteListViewRoute.dart';
 import 'package:basic_component_tutorial/InheritedWidgetRoute.dart';
+import 'package:basic_component_tutorial/JSONToDartModelRoute.dart';
 import 'package:basic_component_tutorial/LayoutBuilderAndAfterLayoutRoute.dart';
 import 'package:basic_component_tutorial/LinearLayoutWidgetRoute.dart';
 import 'package:basic_component_tutorial/ListViewRoute.dart';
@@ -39,6 +44,7 @@ import 'package:basic_component_tutorial/ScrollControllerRoute.dart';
 import 'package:basic_component_tutorial/ScrollNotificationRoute.dart';
 import 'package:basic_component_tutorial/SingleChildScrollViewRoute.dart';
 import 'package:basic_component_tutorial/SliverAppBarRoute.dart';
+import 'package:basic_component_tutorial/SocketAPIRoute.dart';
 import 'package:basic_component_tutorial/StackAndPositionedLayoutRoute.dart';
 import 'package:basic_component_tutorial/StaggerAnimationRoute.dart';
 import 'package:basic_component_tutorial/TabBarViewRoute.dart';
@@ -46,6 +52,7 @@ import 'package:basic_component_tutorial/TransformRoute.dart';
 import 'package:basic_component_tutorial/ValueListenableBuilderRoute.dart';
 import 'package:basic_component_tutorial/WaterMarkRoute.dart';
 import 'package:basic_component_tutorial/WaterMaskRoute.dart';
+import 'package:basic_component_tutorial/WebSocketRoute.dart';
 import 'package:basic_component_tutorial/WillPopScopeRoute.dart';
 import 'package:flutter/material.dart';
 
@@ -157,6 +164,13 @@ class MyApp extends StatelessWidget {
         'draw_chessboard_page': (context) => const DrawChessBoardRoute(),
         'custom_checkbox_page': (context) => const CustomCheckboxRoute(),
         'water_mark_page': (context) => const WaterMarkRoute(),
+        'file_operation_page': (context) => const FileOperationRoute(),
+        'http_request_page': (context) => const HTTPRequestRoute(),
+        'http_request_dio_page': (context) => const HttpRequestDioRoute(),
+        'chunk_download_page': (context) => const ChunkDownloadRoute(),
+        'web_socket_page': (context) => const WebSocketRoute(),
+        'socket_api_page': (context) => const SocketAPIRoute(),
+        'json_to_dart_model_page': (context) => const JsonToDartModelRoute(),
       },
     );
   }
@@ -302,6 +316,20 @@ class _MyHomePageState extends State<MyHomePage> {
                 routeName: 'custom_checkbox_page', buttonName: '自定义选择框'),
             MyLuckyElevatedButton(
                 routeName: 'water_mark_page', buttonName: '水印'),
+            MyLuckyElevatedButton(
+                routeName: 'file_operation_page', buttonName: '文件操作'),
+            MyLuckyElevatedButton(
+                routeName: 'http_request_page', buttonName: 'Http 请求'),
+            MyLuckyElevatedButton(
+                routeName: 'http_request_dio_page', buttonName: 'Http请求库-Dio'),
+            MyLuckyElevatedButton(
+                routeName: 'chunk_download_page', buttonName: 'Dio-分块下载'),
+            MyLuckyElevatedButton(
+                routeName: 'web_socket_page', buttonName: 'WebSocket'),
+            MyLuckyElevatedButton(
+                routeName: 'socket_api_page', buttonName: 'Socket API'),
+            MyLuckyElevatedButton(
+                routeName: 'json_to_dart_model_page', buttonName: 'JSON转模型'),
           ],
         ),
       ),

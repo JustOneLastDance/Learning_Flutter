@@ -31,16 +31,36 @@ dependencies:
   flutter:
     sdk: flutter
 
+  # json_serializable 的 常规项
+  json_annotation: ^4.8.1
 
   # The following adds the Cupertino Icons font to your application.
   # Use with the CupertinoIcons class for iOS style icons.
   cupertino_icons: ^1.0.2
 
+  # Utilities for working with English words.
+  # Counts syllables, generates well-sounding word combinations, and provides access to
+  # the top 5000 English words by usage.
   english_words: ^4.0.0
+
+  # A Flutter plugin for finding commonly used locations on the filesystem.
+  path_provider: ^2.0.15
+
+  # dio 是一个强大的 HTTP 网络请求库，
+  # 支持全局配置、Restful API、FormData、拦截器、 请求取消、Cookie 管理、文件上传/下载、超时、自定义适配器、转换器等
+  dio: ^5.3.2
+
+  # web_socket_channel 提供了我们需要连接到WebSocket服务器的工具。
+  # 该package提供了一个WebSocketChannel允许我们既可以监听来自服务器的消息，又可以将消息发送到服务器的方法。
+  web_socket_channel: ^2.4.0
 
 dev_dependencies:
   flutter_test:
     sdk: flutter
+
+  # json_serializable 的 两个开发依赖项
+  json_serializable: ^6.7.1
+  build_runner: ^2.4.6
 
   # The "flutter_lints" package below contains a set of recommended lints to
   # encourage good coding practices. The lint set provided by the package is
